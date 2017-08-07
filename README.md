@@ -52,6 +52,12 @@ In this case, to access MailCatcher web interface you need to enter `http://192.
 When using ***docker-machine*** do not forget to run `eval $(docker-machine env dev)` to configure your shell. If your shell is not properly configured you will not be able to run docker commands. Thus installing or running MailCatcher using this docker image will not work.
 
 ## Ruby on Rails (Rails)
+Add the following lines to your `environments/development.rb` to redirect your ActionMailer directly to MailCatcher:
+```
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+config.action_mailer.raise_delivery_errors = false
+```
 
 ## Known "issue"
 MailCatcher is running in `foreground` mode. This does not change MailCatcher behavior and performances are not affected.
