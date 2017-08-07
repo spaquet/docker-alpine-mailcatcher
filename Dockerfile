@@ -1,5 +1,7 @@
 FROM alpine:3.6
-MAINTAINER Stéphane Paquet <spaquet74@gmail.com>
+LABEL maintainer="spaquet74@gmail.com" \
+      version="1.0" \
+      description="Debug SMTP with style"
 
 RUN apk add --no-cache ca-certificates openssl \
     ruby ruby-bigdecimal ruby-json sqlite-libs libstdc++
