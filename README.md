@@ -5,7 +5,7 @@ MailCatcher very small image available on docker hub thanks to Alpine Linux.
 |---------------|----------|
 | Alpine Linux  | 3.15     |
 | MailCatcher   | 0.8      |
-| Ruby          | 2.4      |
+| Ruby          | 3.0.3-r0 |
 | SQlite        | 3-1.3.13 |
 
 Ruby & SQlite versions may differ as they are updated during the installation of the image.
@@ -64,10 +64,11 @@ Make sure that the *port* and *address* are matching the one of your MailCatcher
 MailCatcher is running in `foreground` mode. This does not change MailCatcher behavior and performances are not affected.
 
 ## Changes
-| version | date |  |
-|---|---|--- |
-| 1.0 | 2017-08-07 | Initial release |
-| 1.1 | 2017-08-08 | |
+| Version | Date       | Notes                      |
+|---------|------------|----------------------------|
+| 1.0     | 2017-08-07 | Initial release            |
+| 1.1     | 2017-08-08 |                            |
+| 1.2     | 2022-0227  | Updated to Mailcatcher 0.8 |
 
 ## Wanna contribute?
 Fork and pull your changes!<br>
