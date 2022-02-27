@@ -10,12 +10,12 @@ ARG MAILCATCHER_VERSION=0.8
 
 RUN apk add --no-cache --virtual .build-deps \
         ruby-dev make g++ sqlite-dev \
-        && gem install -v $MAILCATCHER_VERSION mailcatcher --no-ri --no-rdoc \
+        && gem install -v $MAILCATCHER_VERSION mailcatcher --no-document \
         && apk del .build-deps \
-        && rm -rf /var/cache/apk/*
+        && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 # smtp port & web port
 EXPOSE 1025 1080
 
-ENTRYPOINT ["mailcatcher", "--foreground"]
-CMD ["--ip=0.0.0.0", "--smtp-port=1025", "--http-port=1080"]
+# launch mailcatcher as a foreground process
+CMD ["mailcatcher", "--foreground", "--smtp-port=1025", "--http-port=1080", "--ip=0.0.0.0", "--messages-limit=50"]
