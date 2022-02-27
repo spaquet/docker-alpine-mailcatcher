@@ -3,8 +3,8 @@ MailCatcher very small image available on docker hub thanks to Alpine Linux.
 ## Components & Versions
 | component     | version  |
 |---------------|----------|
-| Alpine Linux  | 3.6      |
-| MailCatcher   | 0.6.5    |
+| Alpine Linux  | 3.15     |
+| MailCatcher   | 0.8      |
 | Ruby          | 2.4      |
 | SQlite        | 3-1.3.13 |
 
@@ -58,6 +58,7 @@ config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
 config.action_mailer.raise_delivery_errors = false
 ```
+Make sure that the *port* and *address* are matching the one of your MailCatcher image, or *docker-machine* if you are on a Mac or PC running Windows.
 
 ## Known "issue"
 MailCatcher is running in `foreground` mode. This does not change MailCatcher behavior and performances are not affected.
@@ -66,6 +67,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | version | date |  |
 |---|---|--- |
 | 1.0 | 2017-08-07 | Initial release |
+| 1.1 | 2017-08-08 | |
 
 ## Wanna contribute?
 Fork and pull your changes!<br>
@@ -76,4 +78,7 @@ Our MailCatecher on Alpine can be found on our [public DockerHub](https://hub.do
 
 ## Official MailCatcher sites:
 Github: [https://github.com/sj26/mailcatcher](https://github.com/sj26/mailcatcher)<br>
-website: [https://mailcatcher.me/](https://mailcatcher.me/)
+Website: [https://mailcatcher.me/](https://mailcatcher.me/)
+
+## Alpine Linux
+Website: [https://alpinelinux.org/](https://alpinelinux.org/)
