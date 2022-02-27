@@ -74,6 +74,9 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
 
+### Local build
+`docker run --rm -it -p 1080:1080 -p 1025:1025 --name mailcatcher $(docker build -q .)`
+
 ## Alpine MailCatcher @DockerHub:
 Our MailCatecher on Alpine can be found on our [public DockerHub](https://hub.docker.com/r/stpaquet/alpinemailcatcher/)
 
