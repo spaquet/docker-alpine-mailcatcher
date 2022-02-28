@@ -3,6 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches: [ master ]
+    tags: 
   pull_request:
     branches: [ master ]
 
@@ -31,4 +32,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/mailcatcher:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/alpinemailcatcher:latest
