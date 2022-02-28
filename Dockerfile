@@ -1,6 +1,6 @@
 FROM alpine:3.15
 LABEL maintainer="spaquet74@gmail.com" \
-    version="1.2" \
+    version="1.3" \
     description="Debug SMTP with style"
 
 RUN apk add --no-cache ca-certificates openssl \
