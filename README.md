@@ -18,6 +18,13 @@ Run `docker pull stpaquet/alpinemailcatcher` from Terminal to install the image 
 Once the installation has completed with success you can run the following command `docker images` and you should see the following output (with more or less line depending on the number of containers already installed on your computer)<br>
 ![](images/MailCatcher_sc_001.png)
 
+### Access Token
+Docker users using 2FA might encounter the following error message: `Error response from daemon: Head "https://registry-1.docker.io/v2/stpaquet/alpinemailcatcher/manifests/latest": unauthorized: please use personal access token to login`
+
+In that case they must follow the following procedure [to set up an access token.](https://docs.docker.com/docker-hub/access-tokens/).
+
+Once the access token created, they must login to their docker machine: `docker login --username <username>` and enter their access token when prompted.
+
 ### Run it ...
 There are different options when it comes to running this images. Here are our most favorite ones:
 
@@ -48,8 +55,11 @@ export DOCKER_MACHINE_NAME="dev"
 ```
 In this case, to access MailCatcher web interface you need to enter `http://192.168.99.100:1080`
 
-###### Nota
+###### Nota I
 When using ***docker-machine*** do not forget to run `eval $(docker-machine env dev)` to configure your shell. If your shell is not properly configured you will not be able to run docker commands. Thus installing or running MailCatcher using this docker image will not work.
+
+###### Nota II
+Newer versions of ***docker desktop*** may not require the above when properly set up on a Mac as they properly bind to the localhost address of the machine being used.
 
 ## Ruby on Rails (Rails)
 Add the following lines to your `environments/development.rb` to redirect your ActionMailer directly to MailCatcher:
@@ -69,12 +79,15 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.0     | 2017-08-07 | Initial release            |
 | 1.1     | 2017-08-08 |                            |
 | 1.2     | 2022-0227  | Updated to Mailcatcher 0.8 |
-
+|         |            | Limit to 50 the number of  |
+|         |            | emails saved in mailcatcher
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
 
 ### Local build
+`git clone git@github.com:spaquet/alpinemailcatcher.git`<br>
+`cd alpinemailcatcher`<br>
 `docker run --rm -it -p 1080:1080 -p 1025:1025 --name mailcatcher $(docker build -q .)`
 
 ## Alpine MailCatcher @DockerHub:
