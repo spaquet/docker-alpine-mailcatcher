@@ -78,9 +78,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 |---------|------------|----------------------------|
 | 1.0     | 2017-08-07 | Initial release            |
 | 1.1     | 2017-08-08 |                            |
-| 1.2     | 2022-0227  | Updated to Mailcatcher 0.8 |
-|         |            | Limit to 50 the number of  |
-|         |            | emails saved in mailcatcher
+| 1.2     | 2022-0227  | Updated to Mailcatcher 0.8<br> Limit to 50 the number of emails saved in mailcatcher
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
