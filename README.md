@@ -34,6 +34,11 @@ There are different options when it comes to running this images. Here are our m
 #### ... as a daemon
 `docker run -d -p 1080:1080 -p 1025:1025 --name mailcatcher stpaquet/alpinemailcatcher`
 
+#### ... change `--messages-limit` value
+The default value is 50, but this value can be changed when launching the docker image using the following command: `docker run -d -p 1080:1080 -p 1025:1025 -e MAIL_LIMIT=60 --name mailcatcher stpaquet/alpinemailcatcher`<br>
+In the above example the value is raised to 60.
+
+As this value is defined as an environment variable it can be modified in different ways, including using a ***docker-compose*** file.
 #### ... Changing port (& running as a daemon)
 In this version you cannot change the ports being used in the image. However, you can change the port translation.
 If ports 1080 or 1025 are used by an other application or service on your computer you can change these values the following way:<br>
@@ -78,7 +83,8 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 |---------|------------|----------------------------|
 | 1.0     | 2017-08-07 | Initial release            |
 | 1.1     | 2017-08-08 |                            |
-| 1.2     | 2022-0227  | Updated to Mailcatcher 0.8<br> Limit to 50 the number of emails saved in mailcatcher
+| 1.2     | 2022-02-27 | Updated to Mailcatcher 0.8<br> Limit to 50 the number of emails saved in mailcatcher |
+| 1.3     | 2022-02-27 | Enable users to change mail-limit value at run time |
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
