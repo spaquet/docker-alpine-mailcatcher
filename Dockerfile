@@ -6,8 +6,9 @@ LABEL maintainer="spaquet74@gmail.com" \
 RUN apk add --no-cache ca-certificates openssl \
     ruby ruby-bigdecimal ruby-json sqlite-libs libstdc++
 
-ARG MAILCATCHER_VERSION=0.8
+ARG MAILCATCHER_VERSION=0.8.1
 
+# --message-limit default value is 50
 ENV MAIL_LIMIT=50
 
 RUN apk add --no-cache --virtual .build-deps \
