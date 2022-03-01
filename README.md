@@ -4,7 +4,7 @@ MailCatcher very small image available on docker hub thanks to Alpine Linux.
 | component     | version  |
 |---------------|----------|
 | Alpine Linux  | 3.15     |
-| MailCatcher   | 0.8      |
+| MailCatcher   | 0.8.1    |
 | Ruby          | 3.0.3-r0 |
 | SQlite        | 3-1.3.13 |
 
