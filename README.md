@@ -39,6 +39,18 @@ The default value is 50, but this value can be changed when launching the docker
 In the above example the value is raised to 60.
 
 As this value is defined as an environment variable it can be modified in different ways, including using a ***docker-compose*** file.
+
+#### ... other environment variables and their default values
+
+##### LANG="en_US.UTF-8"
+
+##### LC_ALL="en_US.UTF-8"
+
+##### LANGUAGE="en_US.UTF-8"
+
+##### TIMEZONE="UTC"
+
+All of the above variables can be changed at run time using the `-e` flag or included in a ***docker-compose*** file.
 #### ... Changing port (& running as a daemon)
 In this version you cannot change the ports being used in the image. However, you can change the port translation.
 If ports 1080 or 1025 are used by an other application or service on your computer you can change these values the following way:<br>
@@ -86,6 +98,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.2     | 2022-02-27 | Updated to Mailcatcher 0.8<br> Limit to 50 the number of emails saved in mailcatcher |
 | 1.3     | 2022-02-27 | Enable users to change mail-limit value at run time |
 | 1.4     | 2022-02-28 | Upgrading to Mailcatcher 0.8.1 |
+| 1.5     | 2022-03-02 | Tighter control over the environment |
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
