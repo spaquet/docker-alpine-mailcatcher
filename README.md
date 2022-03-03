@@ -1,7 +1,7 @@
 Docker Mailcatcher using the latest Alpine Linux 
 
 ## Status
-![Build](https://github.com/spaquet/docker-alpine-mailcatcher/actions/workflows/docker-image/badge.svg)
+[![Build](https://github.com/spaquet/docker-alpine-mailcatcher/actions/workflows/docker-image/badge.svg)
 
 ## Components & Versions
 | component     | version  |
