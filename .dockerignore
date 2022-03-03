@@ -1,6 +1,7 @@
-/.git
-/.gitattributes
-/.gitignore
+.git
+.gitignore
+.cache
 /Dockerfile
-/LICENSE
-/README.md
+LICENSE
+*.md
+**/.DS_Store
