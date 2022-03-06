@@ -1,10 +1,10 @@
 FROM alpine:3.15
 LABEL maintainer="spaquet74@gmail.com" \
-    version="1.5" \
+    version="1.6" \
     description="Debug SMTP with style using mailcatcher"
 
 # Mailcatcher version
-ARG MAILCATCHER_VERSION=0.8.1
+ARG MAILCATCHER_VERSION=0.8.2
 
 # Setting the environment defaults to en_US.UTF-8
 # --message-limit default value is 50

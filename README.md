@@ -7,7 +7,7 @@ Docker Mailcatcher using the latest Alpine Linux
 | component     | version  |
 |---------------|----------|
 | Alpine Linux  | 3.15     |
-| MailCatcher   | 0.8.1    |
+| MailCatcher   | 0.8.2    |
 | Ruby          | 3.0.3-r0 |
 | SQlite        | 3-1.3.13 |
 
@@ -102,6 +102,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.3     | 2022-02-27 | Enable users to change mail-limit value at run time |
 | 1.4     | 2022-02-28 | Upgrading to Mailcatcher 0.8.1 |
 | 1.5     | 2022-03-03 | Tighter control over the environment |
+| 1.6     | 2022-03-04 | Upgrading to Mailcatcher 0.8.2 |
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
