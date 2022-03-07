@@ -5,6 +5,8 @@ on:
     branches: [ master ]
     tags:
       - 'v*.*.*'
+    paths:
+      - .github/workflows/docker-image.yml
     paths-ignore:
       - '**.md'
       - '**.yml'
