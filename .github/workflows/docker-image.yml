@@ -7,9 +7,8 @@ on:
       - 'v*.*.*'
     paths:
       - .github/workflows/docker-image.yml
-    paths-ignore:
-      - '**.md'
-      - .github/workflows/update-description.yml
+      - '!**.md'
+      - '!.github/workflows/update-description.yml'
 
 env:
   TEST_TAG: user/myapp:test
