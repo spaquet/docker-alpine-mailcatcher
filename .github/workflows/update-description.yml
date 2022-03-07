@@ -16,7 +16,7 @@ jobs:
       uses: peter-evans/dockerhub-description@v2.4.3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
         repository: stpaquet/alpinemailcatcher
         short-description: ${{ github.event.repository.description }}
         readme-filepath: ./README.md
