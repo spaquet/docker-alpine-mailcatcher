@@ -38,16 +38,16 @@ jobs:
       with:
         platforms: all
 
-    - name: Build and export to Docker
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        load: true
-        tags: ${{ env.TEST_TAG }}
+    # - name: Build and export to Docker
+    #   uses: docker/build-push-action@v2
+    #   with:
+    #     context: .
+    #     load: true
+    #     tags: ${{ env.TEST_TAG }}
 
-    - name: Test
-      run: |
-        docker run --rm ${{ env.TEST_TAG }}
+    # - name: Test
+    #   run: |
+    #     docker run --rm ${{ env.TEST_TAG }}
 
     - name: Build and push
       uses: docker/build-push-action@v2
