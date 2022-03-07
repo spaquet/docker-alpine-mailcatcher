@@ -1,4 +1,4 @@
-Docker Mailcatcher using the latest Alpine Linux 
+Docker Mailcatcher using the latest Alpine Linux.
 
 ## Status
 [![Docker Image CI](https://github.com/spaquet/docker-alpine-mailcatcher/actions/workflows/docker-image.yml/badge.svg)](https://github.com/spaquet/docker-alpine-mailcatcher/actions/workflows/docker-image.yml)
@@ -12,6 +12,12 @@ Docker Mailcatcher using the latest Alpine Linux
 | SQlite        | 3-1.3.13 |
 
 Ruby & SQlite versions may differ as they are updated during the installation of the image.
+
+## Supported Architectures
+* x86_64
+* arm64 (apple M1)
+
+Should you need additional architecture, update the ***Dockerfile*** and submit your PR for review.
 
 ## Usage
 
