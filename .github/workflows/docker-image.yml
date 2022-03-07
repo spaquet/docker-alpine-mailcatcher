@@ -9,7 +9,7 @@ on:
       - .github/workflows/docker-image.yml
     paths-ignore:
       - '**.md'
-      - '**.yml'
+      - .github/workflows/update-description.yml
 
 env:
   TEST_TAG: user/myapp:test
