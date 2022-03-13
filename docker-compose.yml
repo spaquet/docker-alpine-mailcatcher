@@ -1,0 +1,13 @@
+version: "3.9" # optional since v1.27.0
+
+services:
+  mailcatcher:
+    restart: on-failure:10
+    # build: . # if building from source
+    image: stpaquet/alpinemailcatcher:latest # or any other image you want to use
+    environment:
+      - MAIL_LIMIT=70 # docker image default is 50
+      - TIMEZONE=America/Los_Angeles # docker image default is UTC
+    ports:
+    - "1080:1080"
+    - "1025:1025"
