@@ -116,12 +116,12 @@ Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
 
 ### Local build
-`git clone git@github.com:spaquet/alpinemailcatcher.git`<br>
-`cd alpinemailcatcher`<br>
+`git clone git@github.com:spaquet/docker-alpine-mailcatcher.git`<br>
+`cd docker-alpine-mailcatcher`<br>
 `docker run --rm -it -p 1080:1080 -p 1025:1025 --name mailcatcher $(docker build -q .)`
 
 ## Alpine MailCatcher @DockerHub:
-Our MailCatecher on Alpine can be found on our [public DockerHub](https://hub.docker.com/r/stpaquet/alpinemailcatcher/)
+Our MailCatecher on Alpine can be found on our [public DockerHub](https://github.com/spaquet/docker-alpine-mailcatcher)
 
 ## Official MailCatcher sites:
 Github: [https://github.com/sj26/mailcatcher](https://github.com/sj26/mailcatcher)<br>
