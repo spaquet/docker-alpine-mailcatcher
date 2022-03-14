@@ -121,8 +121,10 @@ To build run `docker build -t stpaquet/alpinemailcatcher`
 `docker run --rm -it -p 1080:1080 -p 1025:1025 --name mailcatcher $(docker build -q .)`
 
 ## Alpine MailCatcher @DockerHub:
-Our MailCatecher on Alpine can be found on our [public DockerHub](https://github.com/spaquet/docker-alpine-mailcatcher)
+[https://hub.docker.com/r/stpaquet/alpinemailcatcher](https://hub.docker.com/r/stpaquet/alpinemailcatcher)
 
+## Alpine MailCatcher on GitHub:
+[https://github.com/spaquet/docker-alpine-mailcatcher](https://github.com/spaquet/docker-alpine-mailcatcher)
 ## Official MailCatcher sites:
 Github: [https://github.com/sj26/mailcatcher](https://github.com/sj26/mailcatcher)<br>
 Website: [https://mailcatcher.me/](https://mailcatcher.me/)
