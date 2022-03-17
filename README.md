@@ -24,6 +24,10 @@ Ruby & SQlite versions may differ as they are updated during the installation of
 
 Should you need additional architecture, update the ***Dockerfile*** and submit your PR for review.
 
+## Latest version
+[![GitHub release](https://img.shields.io/github/release/spaquet/docker-alpine-mailcatcher.svg)](https://GitHub.com/spaquet/docker-alpine-mailcatcher/releases/)
+
+
 ## Usage
 
 ### Install it!
