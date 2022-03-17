@@ -19,8 +19,8 @@ ENV LANG="en_US.UTF-8" \
     TIMEZONE="UTC" \
     MAIL_LIMIT=50
 
-RUN apk add --no-cache ca-certificates openssl \
-    ruby ruby-bigdecimal ruby-json sqlite-libs libstdc++
+RUN apk add --no-cache ruby ruby-bigdecimal \
+    ruby-json sqlite-libs libstdc++
 
 RUN apk add --no-cache --virtual .build-deps \
     ruby-dev make g++ sqlite-dev \
