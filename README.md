@@ -3,6 +3,8 @@ Docker Mailcatcher using the latest Alpine Linux.
 ## Status
 [![Docker Image CI](https://github.com/spaquet/docker-alpine-mailcatcher/actions/workflows/docker-image.yml/badge.svg)](https://github.com/spaquet/docker-alpine-mailcatcher/actions/workflows/docker-image.yml)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/spaquet//badge.svg)](https://snyk.io/test/github/spaquet/docker-alpine-mailcatcher)
+
 ## Components & Versions
 | component     | version  |
 |---------------|----------|
