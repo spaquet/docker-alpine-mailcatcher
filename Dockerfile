@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.15.1
 
 # Mailcatcher version
 ARG MAILCATCHER_VERSION=0.8.2
