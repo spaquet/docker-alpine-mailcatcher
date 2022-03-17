@@ -5,7 +5,7 @@ ARG MAILCATCHER_VERSION=0.8.2
 
 # Label
 LABEL maintainer="spaquet74@gmail.com" \
-    version="1.7" \
+    version="1.7.2" \
     description="Debug emails with style using mailcatcher a super simple SMTP server which catches messages sent to it and displays them in a web interface" \
     org.label-schema.name="mailcatcher" \
     org.label-schema.version="${MAILCATCHER_VERSION}" \
@@ -20,12 +20,10 @@ ENV LANG="en_US.UTF-8" \
     MAIL_LIMIT=50
 
 RUN apk add --no-cache ruby ruby-bigdecimal \
-    ruby-json sqlite-libs libstdc++
-
-RUN apk add --no-cache --virtual .build-deps \
+    ruby-json sqlite-libs libstdc++ \
     ruby-dev make g++ sqlite-dev \
     && gem install -v $MAILCATCHER_VERSION mailcatcher --no-document \
-    && apk del .build-deps \
+    && apk del ruby-dev make g++ sqlite-dev \
     && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 # expose smtp port & web port
