@@ -111,6 +111,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.4     | 2022-02-28 | Upgrading to Mailcatcher 0.8.1 |
 | 1.5     | 2022-03-03 | Tighter control over the environment |
 | 1.6     | 2022-03-04 | Upgrading to Mailcatcher 0.8.2 |
+| 1.7     | 2022-03-17 | Upgrading Alping Linux to 3.15.1 |
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
