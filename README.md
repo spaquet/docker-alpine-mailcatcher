@@ -121,6 +121,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7     | 2022-03-17 | Upgrading Alpine Linux to 3.15.1<br>Fix [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) |
 | 1.7.1   | 2022-03-17 | Removing unnecessary packages  |
 | 1.7.2   | 2022-03-17 | Removed a build layer |
+| 1.7.3   | 2022-03-18 | Fixing CVE-2022-0778 once for all. In the previous versions, Libretls was outdated and offered a way to exploit CVE-2022-0778 |
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`
