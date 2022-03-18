@@ -1,11 +1,11 @@
-FROM alpine:3.15.1
+FROM alpine:latest
 
 # Mailcatcher version
 ARG MAILCATCHER_VERSION=0.8.2
 
 # Label
 LABEL maintainer="spaquet74@gmail.com" \
-    version="1.7.2" \
+    version="1.7.3" \
     description="Debug emails with style using mailcatcher a super simple SMTP server which catches messages sent to it and displays them in a web interface" \
     org.label-schema.name="mailcatcher" \
     org.label-schema.version="${MAILCATCHER_VERSION}" \
@@ -24,6 +24,7 @@ RUN apk add --no-cache ruby ruby-bigdecimal \
     ruby-dev make g++ sqlite-dev \
     && gem install -v $MAILCATCHER_VERSION mailcatcher --no-document \
     && apk del ruby-dev make g++ sqlite-dev \
+    && apk update && apk upgrade \
     && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 # expose smtp port & web port
