@@ -23,7 +23,7 @@ RUN apk add --no-cache ruby ruby-bigdecimal \
     ruby-json sqlite-libs libstdc++ \
     ruby-dev make g++ sqlite-dev \
     && gem install -v $MAILCATCHER_VERSION mailcatcher --no-document \
-    && apk del ruby-dev make g++ sqlite-dev \
+    && apk del --rdepends --purge ruby-dev make g++ sqlite-dev \
     && apk update && apk upgrade \
     && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
