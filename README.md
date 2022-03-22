@@ -36,6 +36,10 @@ Run `docker pull stpaquet/alpinemailcatcher` from Terminal to install the image 
 Once the installation has completed with success you can run the following command `docker images` and you should see the following output (with more or less line depending on the number of containers already installed on your computer)<br>
 ![](images/MailCatcher_sc_001.png)
 
+#### How-to
+A beginner guide to install Mailcatcher using a docker image and docker compose can be found here: 
+[https://medium.com/@spaquet/mailcatcher-to-the-rescue-4ba438dc98c2](https://medium.com/@spaquet/mailcatcher-to-the-rescue-4ba438dc98c2)
+
 ### Access Token
 Docker users using 2FA might encounter the following error message: `Error response from daemon: Head "https://registry-1.docker.io/v2/stpaquet/alpinemailcatcher/manifests/latest": unauthorized: please use personal access token to login`
 
