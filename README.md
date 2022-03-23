@@ -9,7 +9,7 @@ Docker Mailcatcher using the latest Alpine Linux.
 ## Components & Versions
 | component     | version  |
 |---------------|----------|
-| Alpine Linux  | 3.15.1   |
+| Alpine Linux  | 3.15.2   |
 | MailCatcher   | 0.8.2    |
 | Ruby          | 3.0.3-r0 |
 | SQLite        | 3.36.0-r0 |
@@ -126,6 +126,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.1   | 2022-03-17 | Removing unnecessary packages  |
 | 1.7.2   | 2022-03-17 | Removed a build layer |
 | 1.7.3   | 2022-03-18 | Fixing CVE-2022-0778 once for all. In the previous versions, Libretls was outdated and offered a way to exploit CVE-2022-0778 |
+| 1.7.4   | 2022-03-23 | Upgrading to Alpine Linux 3.15.2 which includes a fix for libretls CVE-2022-0778 |
 ## Wanna contribute?
 Fork and pull your changes!<br>
 To build run `docker build -t stpaquet/alpinemailcatcher`

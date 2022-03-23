@@ -1,4 +1,4 @@
-FROM alpine:3.15.1
+FROM alpine:3.15.2
 
 # Mailcatcher version
 ARG MAILCATCHER_VERSION=0.8.2
@@ -24,7 +24,7 @@ RUN apk add --no-cache ruby ruby-bigdecimal \
     ruby-dev make g++ sqlite-dev \
     && gem install -v $MAILCATCHER_VERSION mailcatcher --no-document \
     && apk del --rdepends --purge ruby-dev make g++ sqlite-dev \
-    && apk update && apk upgrade \
+    # && apk update && apk upgrade \
     && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 # expose smtp port & web port
