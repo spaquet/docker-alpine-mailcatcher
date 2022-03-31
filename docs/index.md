@@ -135,7 +135,7 @@ Make sure that the *port* and *address* are matching the one of your MailCatcher
 
 MailCatcher is running in `foreground` mode. This does not change MailCatcher behavior and performances are not affected.
 
-## Changes
+## History
 
 | Version | Date       | Notes                      |
 |---------|------------|----------------------------|
@@ -146,11 +146,11 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.4     | 2022-02-28 | Upgrading to Mailcatcher 0.8.1 |
 | 1.5     | 2022-03-03 | Tighter control over the environment |
 | 1.6     | 2022-03-04 | Upgrading to Mailcatcher 0.8.2 |
-| 1.7     | 2022-03-17 | Upgrading Alpine Linux to 3.15.1<br>Fix [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) |
+| 1.7     | 2022-03-17 | Upgrading Alpine Linux to 3.15.1<br>Partial fix [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) |
 | 1.7.1   | 2022-03-17 | Removing unnecessary packages  |
 | 1.7.2   | 2022-03-17 | Removed a build layer |
-| 1.7.3   | 2022-03-18 | Fixing CVE-2022-0778 once for all. In the previous versions, Libretls was outdated and offered a way to exploit CVE-2022-0778 |
-| 1.7.4   | 2022-03-23 | Upgrading to Alpine Linux 3.15.2 which includes a fix for libretls CVE-2022-0778 |
+| 1.7.3   | 2022-03-18 | Fixing [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) once for all. In the previous versions, Libretls was outdated and offered a way to exploit CVE-2022-0778 |
+| 1.7.4   | 2022-03-23 | Upgrading to Alpine Linux 3.15.2 which includes a fix for libretls [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) and reverting to the default build process |
 | 1.7.5   | 2022-03-31 | Upgrading to Alpine Linux 3.15.3 |
 
 ## Wanna contribute?
