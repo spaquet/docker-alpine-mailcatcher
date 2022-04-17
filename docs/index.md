@@ -41,6 +41,10 @@ Run `docker pull stpaquet/alpinemailcatcher` from Terminal to install the image 
 Once the installation has completed with success you can run the following command `docker images` and you should see the following output (with more or less line depending on the number of containers already installed on your computer)<br>
 ![](images/MailCatcher_sc_001.png)
 
+### Pull / Upgrade
+Pulling or upgrading to the latest version is done via<br>
+`docker pull stpaquet/alpinemailcatcher:latest`
+
 #### How-to
 
 A beginner guide to install Mailcatcher using a docker image and docker compose can be found here:
