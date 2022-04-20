@@ -131,6 +131,7 @@ Add the following lines to your `environments/development.rb` to redirect your A
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
 config.action_mailer.raise_delivery_errors = false
+config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 ```
 
 Make sure that the *port* and *address* are matching the one of your MailCatcher image, or *docker-machine* if you are on a Mac or PC running Windows.
