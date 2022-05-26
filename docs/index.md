@@ -161,6 +161,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.4   | 2022-03-23 | Upgrading to Alpine Linux 3.15.2 which includes a fix for libretls [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) and reverting to the default build process |
 | 1.7.5   | 2022-03-31 | Upgrading to Alpine Linux 3.15.3 |
 | 1.7.6   | 2022-04-05 | Upgrading to Alpine Linux 3.15.4 |
+| 1.7.7   | 2022-05-25 | Upgrading to Alpine Linux 3.16.0 |
 
 ## Wanna contribute?
 
