@@ -12,9 +12,9 @@ Docker Mailcatcher using the latest Alpine Linux.
 
 | component     | version  |
 |---------------|----------|
-| Alpine Linux  | 3.15.4   |
+| Alpine Linux  | 3.16.0   |
 | MailCatcher   | 0.8.2    |
-| Ruby          | 3.0.3-r0 |
+| Ruby          | 3.1.2-r0 |
 | SQLite        | 3.36.0-r0 |
 
 Ruby & SQlite versions may differ as they are updated during the installation of the image. A full list of the installed packages can be extracted using the following command `docker exec -i <image_name> apk info -vv | sort`
@@ -162,6 +162,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.5   | 2022-03-31 | Upgrading to Alpine Linux 3.15.3 |
 | 1.7.6   | 2022-04-05 | Upgrading to Alpine Linux 3.15.4 |
 | 1.7.7   | 2022-05-25 | Upgrading to Alpine Linux 3.16.0 |
+| 1.7.8   | 2022-05-30 | Fixing #5 - net-smtp was not properly loading when using ruby 3.1 |
 
 ## Wanna contribute?
 
