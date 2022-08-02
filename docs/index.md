@@ -12,7 +12,7 @@ Docker Mailcatcher using the latest Alpine Linux.
 
 | component     | version  |
 |---------------|----------|
-| Alpine Linux  | 3.16.0   |
+| Alpine Linux  | 3.16.1   |
 | MailCatcher   | 0.8.2    |
 | Ruby          | 3.1.2-r0 |
 | SQLite        | 3.36.0-r0 |
@@ -163,6 +163,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.6   | 2022-04-05 | Upgrading to Alpine Linux 3.15.4 |
 | 1.7.7   | 2022-05-25 | Upgrading to Alpine Linux 3.16.0 |
 | 1.7.8   | 2022-05-30 | Fixing #5 - net-smtp was not properly loading when using ruby 3.1 |
+| 1.7.9   | 2022-08-02 | Upgrading to Alpine Linux 3.16.1 - fix 2 major issues: busybox [CVE-2022-30065](https://security.alpinelinux.org/vuln/CVE-2022-30065) and openssl [CVE-2022-2097](https://security.alpinelinux.org/vuln/CVE-2022-2097). Alpine 3.16.1 detail change log can be found [here](https://www.alpinelinux.org/posts/Alpine-3.16.1-released.html) |
 
 ## Wanna contribute?
 
