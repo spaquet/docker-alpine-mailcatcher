@@ -1,11 +1,12 @@
-FROM alpine:3.16.2
+FROM alpine:3.18.4
 
 # Mailcatcher version
-ARG MAILCATCHER_VERSION=0.8.2
+# ARG MAILCATCHER_VERSION=0.8.2
+ARG MAILCATCHER_VERSION=0.9.0
 
 # Label
 LABEL maintainer="spaquet74@gmail.com" \
-    version="1.7.8" \
+    version="1.7.12" \
     description="Debug emails with style using mailcatcher a super simple SMTP server which catches messages sent to it and displays them in a web interface" \
     org.label-schema.name="mailcatcher" \
     org.label-schema.version="${MAILCATCHER_VERSION}" \
@@ -20,7 +21,7 @@ ENV LANG="en_US.UTF-8" \
     MAIL_LIMIT=50
 
 RUN apk add --no-cache ruby \
-    ruby-json sqlite-libs libstdc++ \
+    ruby-json libc6-compat sqlite-libs libstdc++ \
     ruby-dev make g++ sqlite-dev \
     && gem install --no-document --no-user-install net-smtp \
     && gem install -v $MAILCATCHER_VERSION mailcatcher --no-document \

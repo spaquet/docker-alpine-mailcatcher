@@ -9,10 +9,10 @@ Docker Mailcatcher using the latest Alpine Linux.
 ## Components & Versions
 | component     | version  |
 |---------------|----------|
-| Alpine Linux  | 3.16.2   |
-| MailCatcher   | 0.8.2    |
-| Ruby          | 3.1.2-r0 |
-| SQLite        | 3.36.0-r0 |
+| Alpine Linux  | 3.18.4   |
+| MailCatcher   | 0.9.0    |
+| Ruby          | 3.2.0    |
+| SQLite        | 3.43.1-r0 |
 
 Ruby & SQlite versions may differ as they are updated during the installation of the image. A full list of the installed packages can be extracted using the following command `docker exec -i <image_name> apk info -vv | sort`
 
