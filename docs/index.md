@@ -166,7 +166,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.9   | 2022-08-02 | Upgrading to Alpine Linux 3.16.1 - fix 2 major issues: busybox [CVE-2022-30065](https://security.alpinelinux.org/vuln/CVE-2022-30065) and openssl [CVE-2022-2097](https://security.alpinelinux.org/vuln/CVE-2022-2097). Alpine 3.16.1 detail change log can be found [here](https://www.alpinelinux.org/posts/Alpine-3.16.1-released.html) |
 | 1.7.10   | 2022-08-16 | Upgrading to Alpine Linux 3.16.2 |
 | 1.7.11 | 2022-11-28 | Upgrading to Alpine Linux 3.17.0 and mailcatcher 0.9.0.beta1 |
-| 1.9.0  | 2023-10-06 | Upgrading to Alpine Linux 3.18.4 and mailcatcher 0.9.0 |
+| 1.8.1  | 2023-10-06 | Upgrading to Alpine Linux 3.18.4 and mailcatcher 0.9.0 |
 
 ## Wanna contribute?
 
