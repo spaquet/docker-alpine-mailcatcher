@@ -6,7 +6,7 @@ ARG MAILCATCHER_VERSION=0.9.0
 
 # Label
 LABEL maintainer="spaquet74@gmail.com" \
-    version="1.7.12" \
+    version="1.8.0" \
     description="Debug emails with style using mailcatcher a super simple SMTP server which catches messages sent to it and displays them in a web interface" \
     org.label-schema.name="mailcatcher" \
     org.label-schema.version="${MAILCATCHER_VERSION}" \
