@@ -24,7 +24,7 @@ Ruby & SQlite versions may differ as they are updated during the installation of
 * x86_64
 * arm64 (apple M1, etc.)
 * x386, x86_32
-* arm v7 and v6
+* arm v8, v7 and v6
 
 Should you need additional architecture, update the ***Dockerfile*** and submit your PR for review.
 
