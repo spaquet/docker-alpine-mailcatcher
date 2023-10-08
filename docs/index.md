@@ -167,6 +167,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.10   | 2022-08-16 | Upgrading to Alpine Linux 3.16.2 |
 | 1.7.11 | 2022-11-28 | Upgrading to Alpine Linux 3.17.0 and mailcatcher 0.9.0.beta1 |
 | 1.8.1  | 2023-10-06 | Upgrading to Alpine Linux 3.18.4 and mailcatcher 0.9.0 |
+| 1.8.1  | 2023-10-08 | Adding support to linux/arm64/v8 |
 
 ## Wanna contribute?
 
