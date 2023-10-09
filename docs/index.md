@@ -181,9 +181,6 @@ To build run `docker build -t stpaquet/alpinemailcatcher`
 `cd docker-alpine-mailcatcher`<br>
 `docker run --rm -it -p 1080:1080 -p 1025:1025 --name mailcatcher $(docker build -q .)`
 
-Special note to Apple M1 user:
-`docker run --rm -it -p 1080:1080 -p 1025:1025 --name mailcatcher $(docker build --platform linux/amd64 -q .)`
-
 ## Alpine MailCatcher @DockerHub
 
 [https://hub.docker.com/r/stpaquet/alpinemailcatcher](https://hub.docker.com/r/stpaquet/alpinemailcatcher)
