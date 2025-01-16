@@ -1,4 +1,4 @@
-FROM alpine:3.18.4
+FROM alpine:3.21.2
 
 # Mailcatcher version
 # Use --build-arg VERSION=... to override
