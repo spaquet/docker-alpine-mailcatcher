@@ -10,23 +10,23 @@ Docker Mailcatcher using the latest Alpine Linux.
 
 ## Components & Versions
 
-| component     | version  |
-|---------------|----------|
-| Alpine Linux  | 3.18.4   |
-| MailCatcher   | 0.9.0    |
-| Ruby          | 3.2.0    |
-| SQLite        | 3.43.1-r0 |
+| component    | version   |
+| ------------ | --------- |
+| Alpine Linux | 3.23.2    |
+| MailCatcher  | 0.10.0    |
+| Ruby         | 3.4.8     |
+| SQLite       | 3.51.1-r0 |
 
 Ruby & SQlite versions may differ as they are updated during the installation of the image. A full list of the installed packages can be extracted using the following command `docker exec -i <image_name> apk info -vv | sort`
 
 ## Supported Architectures
 
-* x86_64
-* arm64 (apple M1, etc.)
-* x386, x86_32
-* arm v8, v7 and v6
+- x86_64
+- arm64 (apple M1, etc.)
+- x386, x86_32
+- arm v8, v7 and v6
 
-Should you need additional architecture, update the ***Dockerfile*** and submit your PR for review.
+Should you need additional architecture, update the **_Dockerfile_** and submit your PR for review.
 
 ## Latest version
 
@@ -42,6 +42,7 @@ Once the installation has completed with success you can run the following comma
 ![](images/MailCatcher_sc_001.png)
 
 ### Pull / Upgrade
+
 Pulling or upgrading to the latest version is done via<br>
 `docker pull stpaquet/alpinemailcatcher:latest`
 
@@ -75,7 +76,7 @@ There are different options when it comes to running this images. Here are our m
 The default value is 50, but this value can be changed when launching the docker image using the following command: `docker run -d -p 1080:1080 -p 1025:1025 -e MAIL_LIMIT=60 --name mailcatcher stpaquet/alpinemailcatcher`<br>
 In the above example the value is raised to 60.
 
-As this value is defined as an environment variable it can be modified in different ways, including using a ***docker-compose*** file.
+As this value is defined as an environment variable it can be modified in different ways, including using a **_docker-compose_** file.
 
 #### ... other environment variables and their default values
 
@@ -87,7 +88,7 @@ As this value is defined as an environment variable it can be modified in differ
 
 ##### TIMEZONE="UTC"
 
-All of the above variables can be changed at run time using the `-e` flag or included in a ***docker-compose*** file.
+All of the above variables can be changed at run time using the `-e` flag or included in a **_docker-compose_** file.
 
 #### ... Changing port (& running as a daemon)
 
@@ -101,10 +102,10 @@ Just point your favorite web browser to MailCatcher image IP address if on Linux
 
 ##### When using Docker-Machine (Mac & Windows users)
 
-On Mac and Windows you do not run docker directly, but through ***docker-machine***. This implies that you will not access MailCatcher web interface using the IP address of the container, but the docker-machine one.
+On Mac and Windows you do not run docker directly, but through **_docker-machine_**. This implies that you will not access MailCatcher web interface using the IP address of the container, but the docker-machine one.
 
 To get the IP address of your docker-machine run the following command:
-`docker-machine env dev` (assuming your docker machine is named *dev*<br>
+`docker-machine env dev` (assuming your docker machine is named _dev_<br>
 
 ```
 export DOCKER_TLS_VERIFY="1"
@@ -117,11 +118,11 @@ In this case, to access MailCatcher web interface you need to enter `http://192.
 
 ###### Nota I
 
-When using ***docker-machine*** do not forget to run `eval $(docker-machine env dev)` to configure your shell. If your shell is not properly configured you will not be able to run docker commands. Thus installing or running MailCatcher using this docker image will not work.
+When using **_docker-machine_** do not forget to run `eval $(docker-machine env dev)` to configure your shell. If your shell is not properly configured you will not be able to run docker commands. Thus installing or running MailCatcher using this docker image will not work.
 
 ###### Nota II
 
-Newer versions of ***docker desktop*** may not require the above when properly set up on a Mac as they properly bind to the localhost address of the machine being used.
+Newer versions of **_docker desktop_** may not require the above when properly set up on a Mac as they properly bind to the localhost address of the machine being used.
 
 ## Ruby on Rails (Rails)
 
@@ -134,9 +135,10 @@ config.action_mailer.raise_delivery_errors = false
 config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 ```
 
-Make sure that the *port* and *address* are matching the one of your MailCatcher image, or *docker-machine* if you are on a Mac or PC running Windows.
+Make sure that the _port_ and _address_ are matching the one of your MailCatcher image, or _docker-machine_ if you are on a Mac or PC running Windows.
 
 ## Misc.
+
 Other programming languages and frameworks are supported. Refer to their mailer documentation for their optimal configuration. But, since Mailcatcher is a leight weight SMTP server, most of the case limit to pointing to the local instance of Mailcatcher runnig in Docker and use the port 1025.
 
 ## Known "issue"
@@ -145,30 +147,32 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 
 ## History
 
-| Version | Date       | Notes                      |
-|---------|------------|----------------------------|
-| 1.0     | 2017-08-07 | Initial release            |
-| 1.1     | 2017-08-08 |                            |
-| 1.2     | 2022-02-27 | Updated to Mailcatcher 0.8<br> Limit to 50 the number of emails saved in mailcatcher |
-| 1.3     | 2022-02-27 | Enable users to change mail-limit value at run time |
-| 1.4     | 2022-02-28 | Upgrading to Mailcatcher 0.8.1 |
-| 1.5     | 2022-03-03 | Tighter control over the environment |
-| 1.6     | 2022-03-04 | Upgrading to Mailcatcher 0.8.2 |
-| 1.7     | 2022-03-17 | Upgrading Alpine Linux to 3.15.1<br>Partial fix [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) |
-| 1.7.1   | 2022-03-17 | Removing unnecessary packages  |
-| 1.7.2   | 2022-03-17 | Removed a build layer |
-| 1.7.3   | 2022-03-18 | Fixing [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) once for all. In the previous versions, Libretls was outdated and offered a way to exploit CVE-2022-0778 |
-| 1.7.4   | 2022-03-23 | Upgrading to Alpine Linux 3.15.2 which includes a fix for libretls [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) and reverting to the default build process |
-| 1.7.5   | 2022-03-31 | Upgrading to Alpine Linux 3.15.3 |
-| 1.7.6   | 2022-04-05 | Upgrading to Alpine Linux 3.15.4 |
-| 1.7.7   | 2022-05-25 | Upgrading to Alpine Linux 3.16.0 |
-| 1.7.8   | 2022-05-30 | Fixing #5 - net-smtp was not properly loading when using ruby 3.1 |
+| Version | Date       | Notes                                                                                                                                                                                                                                                                                                                                      |
+| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1.0     | 2017-08-07 | Initial release                                                                                                                                                                                                                                                                                                                            |
+| 1.1     | 2017-08-08 |                                                                                                                                                                                                                                                                                                                                            |
+| 1.2     | 2022-02-27 | Updated to Mailcatcher 0.8<br> Limit to 50 the number of emails saved in mailcatcher                                                                                                                                                                                                                                                       |
+| 1.3     | 2022-02-27 | Enable users to change mail-limit value at run time                                                                                                                                                                                                                                                                                        |
+| 1.4     | 2022-02-28 | Upgrading to Mailcatcher 0.8.1                                                                                                                                                                                                                                                                                                             |
+| 1.5     | 2022-03-03 | Tighter control over the environment                                                                                                                                                                                                                                                                                                       |
+| 1.6     | 2022-03-04 | Upgrading to Mailcatcher 0.8.2                                                                                                                                                                                                                                                                                                             |
+| 1.7     | 2022-03-17 | Upgrading Alpine Linux to 3.15.1<br>Partial fix [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778)                                                                                                                                                                                                                       |
+| 1.7.1   | 2022-03-17 | Removing unnecessary packages                                                                                                                                                                                                                                                                                                              |
+| 1.7.2   | 2022-03-17 | Removed a build layer                                                                                                                                                                                                                                                                                                                      |
+| 1.7.3   | 2022-03-18 | Fixing [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) once for all. In the previous versions, Libretls was outdated and offered a way to exploit CVE-2022-0778                                                                                                                                                       |
+| 1.7.4   | 2022-03-23 | Upgrading to Alpine Linux 3.15.2 which includes a fix for libretls [CVE-2022-0778](https://security.alpinelinux.org/vuln/CVE-2022-0778) and reverting to the default build process                                                                                                                                                         |
+| 1.7.5   | 2022-03-31 | Upgrading to Alpine Linux 3.15.3                                                                                                                                                                                                                                                                                                           |
+| 1.7.6   | 2022-04-05 | Upgrading to Alpine Linux 3.15.4                                                                                                                                                                                                                                                                                                           |
+| 1.7.7   | 2022-05-25 | Upgrading to Alpine Linux 3.16.0                                                                                                                                                                                                                                                                                                           |
+| 1.7.8   | 2022-05-30 | Fixing #5 - net-smtp was not properly loading when using ruby 3.1                                                                                                                                                                                                                                                                          |
 | 1.7.9   | 2022-08-02 | Upgrading to Alpine Linux 3.16.1 - fix 2 major issues: busybox [CVE-2022-30065](https://security.alpinelinux.org/vuln/CVE-2022-30065) and openssl [CVE-2022-2097](https://security.alpinelinux.org/vuln/CVE-2022-2097). Alpine 3.16.1 detail change log can be found [here](https://www.alpinelinux.org/posts/Alpine-3.16.1-released.html) |
-| 1.7.10   | 2022-08-16 | Upgrading to Alpine Linux 3.16.2 |
-| 1.7.11 | 2022-11-28 | Upgrading to Alpine Linux 3.17.0 and mailcatcher 0.9.0.beta1 |
-| 1.8.1  | 2023-10-06 | Upgrading to Alpine Linux 3.18.4 and mailcatcher 0.9.0 |
-| 1.8.2  | 2023-10-08 | Adding support to linux/arm64/v8 |
-| 1.8.3  | 2023-10-09 | Fixing a bug affecting Mac M1 (and likely M2) |
+| 1.7.10  | 2022-08-16 | Upgrading to Alpine Linux 3.16.2                                                                                                                                                                                                                                                                                                           |
+| 1.7.11  | 2022-11-28 | Upgrading to Alpine Linux 3.17.0 and mailcatcher 0.9.0.beta1                                                                                                                                                                                                                                                                               |
+| 1.8.1   | 2023-10-06 | Upgrading to Alpine Linux 3.18.4 and mailcatcher 0.9.0                                                                                                                                                                                                                                                                                     |
+| 1.8.2   | 2023-10-08 | Adding support to linux/arm64/v8                                                                                                                                                                                                                                                                                                           |
+| 1.8.3   | 2023-10-09 | Fixing a bug affecting Mac M1 (and likely M2)                                                                                                                                                                                                                                                                                              |
+
+| 1.9.0 | 2026-01-08 | Upgrading to Alpine Linux 3.23.2, Ruby 3.4.8 and Mailcatcher 0.10.0 |
 
 ## Wanna contribute?
 
