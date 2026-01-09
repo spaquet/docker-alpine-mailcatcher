@@ -173,7 +173,10 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.8.3   | 2023-10-09 | Fixing a bug affecting Mac M1 (and likely M2)                                                                                                                                                                                                                                                                                              |
 
 | 1.9.0 | 2026-01-08 | Upgrading to Alpine Linux 3.23.2, Ruby 3.4.8 and Mailcatcher 0.10.0 |
+
 | 1.9.1 | 2026-01-08 | Optimizing docker image size (~49MB) |
+
+| 2.0.0 | 2026-01-09 | Custom mailcatcher build |
 
 ## Wanna contribute?
 
