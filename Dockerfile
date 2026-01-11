@@ -1,10 +1,8 @@
 FROM alpine:3.23.2
 
 LABEL maintainer="spaquet74@gmail.com" \
-    version="2.0.1" \
-    description="MailCatcher from fork with updated dependencies (Sinatra 4, etc.)"
-
-ARG GITHUB_TOKEN
+    version="2.0.2" \
+    description="MailCatcher NG"
 
 ENV LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
