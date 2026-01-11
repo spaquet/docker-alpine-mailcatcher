@@ -178,6 +178,9 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 
 | 2.0.0 | 2026-01-09 | Custom mailcatcher build |
 
+| 2.0.1 | 2026-01-09 | Upgrading to Customer Mailcatcher 0.12.0 |
+
+
 ## Wanna contribute?
 
 Fork and pull your changes!<br>

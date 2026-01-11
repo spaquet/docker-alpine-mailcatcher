@@ -1,7 +1,7 @@
 FROM alpine:3.23.2
 
 LABEL maintainer="spaquet74@gmail.com" \
-    version="2.0.0" \
+    version="2.0.1" \
     description="MailCatcher from fork with updated dependencies (Sinatra 4, etc.)"
 
 ARG GITHUB_TOKEN
@@ -15,7 +15,7 @@ ENV LANG="en_US.UTF-8" \
 RUN apk add --no-cache --update ruby sqlite-libs libstdc++ \
     && apk add --no-cache --virtual .build-deps ruby-dev make g++ sqlite-dev binutils \
     && gem install sqlite3 -v "~> 2.9" --no-document --platform=ruby -- --use-system-libraries \
-    && gem install mailcatcher --version "0.11.6" --source "https://spaquet:${GITHUB_TOKEN}@rubygems.pkg.github.com/spaquet/" --no-document \
+    && gem install mailcatcher-ng --no-document \
     && find /usr/lib/ruby/gems/*/gems -name "*.so" -exec strip {} + \
     && find /usr/lib/ruby/gems/*/extensions -name "*.so" -exec strip {} + \
     && apk del .build-deps \
