@@ -13,7 +13,7 @@ ENV LANG="en_US.UTF-8" \
 RUN apk add --no-cache --update ruby sqlite-libs libstdc++ \
     && apk add --no-cache --virtual .build-deps ruby-dev make g++ sqlite-dev binutils \
     && gem install sqlite3 -v "~> 2.9" --no-document --platform=ruby -- --use-system-libraries \
-    && gem install mailcatcher-ng:1.2.0 --no-document \
+    && gem install mailcatcher-ng -v "~> 1.2.0" --no-document \
     && find /usr/lib/ruby/gems/*/gems -name "*.so" -exec strip {} + \
     && find /usr/lib/ruby/gems/*/extensions -name "*.so" -exec strip {} + \
     && apk del .build-deps \
