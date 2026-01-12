@@ -32,6 +32,10 @@ Should you need additional architecture, update the **_Dockerfile_** and submit 
 
 [![GitHub release](https://img.shields.io/github/release/spaquet/docker-alpine-mailcatcher.svg)](https://GitHub.com/spaquet/docker-alpine-mailcatcher/releases/)
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a detailed list of changes in each release.
+
 ## Usage & More Information
 
 Please refer to [https://spaquet.github.io/docker-alpine-mailcatcher/](https://spaquet.github.io/docker-alpine-mailcatcher/)
