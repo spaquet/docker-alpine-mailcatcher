@@ -1,7 +1,7 @@
 FROM alpine:3.23.2
 
 LABEL maintainer="spaquet74@gmail.com" \
-    version="2.2.0" \
+    version="2.2.1" \
     description="MailCatcher NG"
 
 ENV LANG="en_US.UTF-8" \
@@ -34,4 +34,4 @@ USER mailcatcher
 
 EXPOSE 1025 1080
 
-CMD ["sh", "-c", "mailcatcher --foreground --smtp-port=1025 --http-port=1080 --ip=0.0.0.0 --messages-limit=$MAIL_LIMIT"]
+CMD ["sh", "-c", "mailcatcher --foreground --smtp-port=1025 --http-port=1080 --ip=0.0.0.0 --messages-limit=$MAIL_LIMIT --no-quit"]
