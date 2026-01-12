@@ -1,4 +1,4 @@
-Docker Mailcatcher using the latest Alpine Linux.
+Docker Mailcatcher NG using the latest Alpine Linux.
 
 ## Status
 
@@ -35,3 +35,7 @@ Should you need additional architecture, update the **_Dockerfile_** and submit 
 ## Usage & More Information
 
 Please refer to [https://spaquet.github.io/docker-alpine-mailcatcher/](https://spaquet.github.io/docker-alpine-mailcatcher/)
+
+MailCatcher NG:
+- Website: [https://spaquet.github.io/mailcatcher/](https://spaquet.github.io/mailcatcher/)
+- GitHub: [https://github.com/spaquet/mailcatcher](https://github.com/spaquet/mailcatcher)
