@@ -13,7 +13,7 @@ Docker Mailcatcher using the latest Alpine Linux.
 | component    | version   |
 | ------------ | --------- |
 | Alpine Linux | 3.23.2    |
-| MailCatcher NG  | 1.2.0    |
+| MailCatcher NG  | 1.4.0    |
 | Ruby         | 3.4.8     |
 | SQLite       | 3.51.1-r0 |
 
@@ -77,6 +77,22 @@ The default value is 50, but this value can be changed when launching the docker
 In the above example the value is raised to 60.
 
 As this value is defined as an environment variable it can be modified in different ways, including using a **_docker-compose_** file.
+
+#### ... enable message persistence
+
+By default, MailCatcher NG stores messages in memory only. To enable persistent storage of messages in a SQLite database, you can use the `--persistence` flag.
+
+Messages will be stored in `~/.mailcatcher/mailcatcher.db` inside the container. To make this database persist across container restarts, you should mount a volume to the mailcatcher user's home directory (`/home/mailcatcher/.mailcatcher`).
+
+**Using Docker run:**
+
+```bash
+docker run -d -p 1080:1080 -p 1025:1025 -v mailcatcher-data:/home/mailcatcher/.mailcatcher --name mailcatcher stpaquet/alpinemailcatcher sh -c "mailcatcher --foreground --smtp-port=1025 --http-port=1080 --ip=0.0.0.0 --messages-limit=50 --persistence"
+```
+
+**Using docker-compose (see example below):**
+
+Messages will be stored persistently in the SQLite database located at `~/.mailcatcher/mailcatcher.db` inside the container. By mounting a volume, you ensure that messages are retained even if the container is stopped or removed.
 
 #### ... other environment variables and their default values
 

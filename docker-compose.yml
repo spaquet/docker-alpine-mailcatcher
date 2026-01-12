@@ -12,3 +12,11 @@ services:
     ports:
     - "1080:1080"
     - "1025:1025"
+    # Uncomment the following section to enable persistent message storage
+    # volumes:
+    #   - mailcatcher-data:/home/mailcatcher/.mailcatcher
+    # command: sh -c "mailcatcher --foreground --smtp-port=1025 --http-port=1080 --ip=0.0.0.0 --messages-limit=$$MAIL_LIMIT --persistence"
+
+# Uncomment the following section when enabling persistence
+# volumes:
+#   mailcatcher-data:

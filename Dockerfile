@@ -1,7 +1,7 @@
 FROM alpine:3.23.2
 
 LABEL maintainer="spaquet74@gmail.com" \
-    version="2.1.0" \
+    version="2.2.0" \
     description="MailCatcher NG"
 
 ENV LANG="en_US.UTF-8" \
@@ -13,7 +13,7 @@ ENV LANG="en_US.UTF-8" \
 RUN apk add --no-cache --update ruby sqlite-libs libstdc++ \
     && apk add --no-cache --virtual .build-deps ruby-dev make g++ sqlite-dev binutils \
     && gem install sqlite3 -v "~> 2.9" --no-document --platform=ruby -- --use-system-libraries \
-    && gem install mailcatcher-ng -v "~> 1.3.0" --no-document \
+    && gem install mailcatcher-ng -v "~> 1.4.0" --no-document \
     && find /usr/lib/ruby/gems/*/gems -name "*.so" -exec strip {} + \
     && find /usr/lib/ruby/gems/*/extensions -name "*.so" -exec strip {} + \
     && apk del .build-deps \
@@ -23,6 +23,14 @@ RUN apk add --no-cache --update ruby sqlite-libs libstdc++ \
     && find /usr/lib/ruby/gems/*/gems -name "spec" -type d -exec rm -rf {} + \
     && find /usr/lib/ruby/gems/*/gems -name "test" -type d -exec rm -rf {} + \
     && find /usr/lib/ruby/gems/*/gems -name "tests" -type d -exec rm -rf {} +
+
+# Create non-root mailcatcher user
+RUN addgroup -g 1000 mailcatcher && \
+    adduser -D -u 1000 -G mailcatcher mailcatcher && \
+    mkdir -p /home/mailcatcher/.mailcatcher && \
+    chown -R mailcatcher:mailcatcher /home/mailcatcher
+
+USER mailcatcher
 
 EXPOSE 1025 1080
 
