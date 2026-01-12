@@ -170,17 +170,14 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 1.7.11  | 2022-11-28 | Upgrading to Alpine Linux 3.17.0 and mailcatcher 0.9.0.beta1                                                                                                                                                                                                                                                                               |
 | 1.8.1   | 2023-10-06 | Upgrading to Alpine Linux 3.18.4 and mailcatcher 0.9.0                                                                                                                                                                                                                                                                                     |
 | 1.8.2   | 2023-10-08 | Adding support to linux/arm64/v8                                                                                                                                                                                                                                                                                                           |
-| 1.8.3   | 2023-10-09 | Fixing a bug affecting Mac M1 (and likely M2)                                                                                                                                                                                                                                                                                              |
+| 1.8.3   | 2023-10-09 | Fixing a bug affecting Mac M1 (and likely M2)                                                          |
+| 1.9.0   | 2026-01-08 | Upgrading to Alpine Linux 3.23.2, Ruby 3.4.8 and Mailcatcher 0.10.0                                  |
+| 1.9.1   | 2026-01-08 | Optimizing docker image size (~49MB)                                                                  |
+| 2.0.0   | 2026-01-09 | Custom mailcatcher build                                                                              |
+| 2.0.1   | 2026-01-09 | Upgrading to Customer Mailcatcher 0.12.0                                                              |
+| 2.0.2   | 2026-01-10 | Upgrading to Customer Mailcatcher NG 1.2.0                                                            |
+| 2.1.0   | 2026-01-11 | Upgrading to Customer Mailcatcher NG 1.3.1<br><ul><li>SMTP Transcripts</li><li>Code optimization and refactoring</li></ul> |
 
-| 1.9.0 | 2026-01-08 | Upgrading to Alpine Linux 3.23.2, Ruby 3.4.8 and Mailcatcher 0.10.0 |
-
-| 1.9.1 | 2026-01-08 | Optimizing docker image size (~49MB) |
-
-| 2.0.0 | 2026-01-09 | Custom mailcatcher build |
-
-| 2.0.1 | 2026-01-09 | Upgrading to Customer Mailcatcher 0.12.0 |
-
-| 2.0.2 | 2026-01-10 | Upgrading to Customer Mailcatcher NG 1.2.0 |
 
 
 ## Wanna contribute?
