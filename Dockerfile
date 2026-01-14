@@ -10,8 +10,8 @@ ENV LANG="en_US.UTF-8" \
     TIMEZONE="UTC" \
     MAIL_LIMIT=50
 
-RUN apk add --no-cache --update ruby sqlite-libs libstdc++ \
-    && apk add --no-cache --virtual .build-deps ruby-dev make g++ sqlite-dev binutils \
+RUN apk add --no-cache --update ruby sqlite-libs libstdc++ libxml2 libxslt \
+    && apk add --no-cache --virtual .build-deps ruby-dev make g++ sqlite-dev binutils libxml2-dev libxslt-dev \
     && gem install sqlite3 -v "~> 2.9" --no-document --platform=ruby -- --use-system-libraries \
     && gem install mailcatcher-ng -v "~> 1.5.2" --no-document \
     && find /usr/lib/ruby/gems/*/gems -name "*.so" -exec strip {} + \

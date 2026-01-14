@@ -13,7 +13,7 @@ Docker Mailcatcher using the latest Alpine Linux.
 | component    | version   |
 | ------------ | --------- |
 | Alpine Linux | 3.23.2    |
-| MailCatcher NG  | 1.4.0    |
+| MailCatcher NG  | 1.5.2    |
 | Ruby         | 3.4.8     |
 | SQLite       | 3.51.1-r0 |
 
@@ -193,6 +193,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 2.0.1   | 2026-01-09 | Upgrading to Customer Mailcatcher 0.12.0                                                              |
 | 2.0.2   | 2026-01-10 | Upgrading to Customer Mailcatcher NG 1.2.0                                                            |
 | 2.1.0   | 2026-01-11 | Upgrading to Customer Mailcatcher NG 1.3.1<br><ul><li>SMTP Transcripts</li><li>Code optimization and refactoring</li></ul> |
+| 2.3.4   | 2026-01-13 | Enhanced stability and performance improvements<br><ul><li>Improved message handling</li><li>Security updates</li><li>Docker image optimization</li></ul> |
 
 
 
