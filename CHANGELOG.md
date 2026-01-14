@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.4] - 2026-01-13
+
+### Added
+- **Claude Integration Support**: Complete integration with Claude through two complementary methods
+  - **Claude Plugin**: HTTP-based plugin for Claude.com and Claude Desktop (`--plugin` flag)
+    - Zero configuration required for plugin discovery
+    - Dynamic OpenAPI spec generation for plugin compatibility
+    - Natural language interface to all email tools
+  - **MCP Server**: Model Context Protocol server for programmatic access (`--mcp` flag)
+    - Full MCP 2024-11-05 protocol implementation
+    - JSON-RPC 2.0 over stdio for reliability
+    - Thread-safe operation within EventMachine reactor
+
+- **Claude Integration Tools** (7 powerful tools exposed via Plugin and MCP):
+  - `search_messages`: Full-text search with filtering (query, limit, attachments, date range)
+  - `get_latest_message_for`: Find latest message for recipient with optional subject filtering
+  - `extract_token_or_link`: Extract OTPs, magic links, reset tokens from messages
+  - `get_parsed_auth_info`: Get structured authentication information
+  - `get_message_preview_html`: Get responsive HTML preview with mobile optimization
+  - `delete_message`: Delete specific message by ID
+  - `clear_messages`: Delete all caught messages
+
+- **Plugin HTTP Endpoints**:
+  - `GET /.well-known/ai-plugin.json`: Standard AI plugin manifest
+  - `GET /plugin/openapi.json`: Dynamic OpenAPI specification
+  - `POST /plugin/search`: Message search
+  - `GET /plugin/message/:id/latest`: Get latest for recipient
+  - `GET /plugin/message/:id/tokens`: Extract tokens
+  - `GET /plugin/message/:id/auth-info`: Get auth information
+  - `GET /plugin/message/:id/preview`: Get HTML preview
+  - `DELETE /plugin/messages`: Clear all
+  - `DELETE /plugin/message/:id`: Delete single
+
+### Changed
+- Upgraded Mailcatcher NG from v1.4.x to v1.5.2
+- Added support for Claude integration flags (`--mcp`, `--plugin`)
+- Version bumped from 2.2.1 to 2.3.4
+
+### Technical Details
+- New optional integration layer for Claude
+- Single source of truth for tools (MCPTools module)
+- Protocol-independent tool implementation
+- Zero breaking changes to existing functionality
+
 ## [2.2.0] - 2026-01-12
 
 ### Added
