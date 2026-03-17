@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.5] - 2026-03-16
+
+### Changed
+- Upgraded Alpine Linux from 3.23.2 to 3.23.3
+- Upgraded MailCatcher NG from 1.5.2 to 1.5.3 (maintenance release)
+- Added support for Ruby 3.4.8 with Alpine Linux 3.23.3
+
 ## [2.3.4] - 2026-01-13
 
 ### Added
