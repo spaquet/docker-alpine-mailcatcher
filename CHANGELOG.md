@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.6] - 2026-05-22
+
+### Changed
+- Upgraded Alpine Linux from 3.23.3 to 3.23.4
+- Upgraded Gemcatcher NG from 1.5.3 to 1.5.7 (maintenance release)
+
 ## [2.3.5] - 2026-03-16
 
 ### Changed
