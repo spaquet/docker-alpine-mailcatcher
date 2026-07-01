@@ -1,7 +1,7 @@
-FROM alpine:3.23.4
+FROM alpine:3.23.5
 
 LABEL maintainer="spaquet74@gmail.com" \
-    version="2.3.6" \
+    version="2.3.7" \
     description="MailCatcher NG"
 
 ENV LANG="en_US.UTF-8" \
@@ -13,7 +13,7 @@ ENV LANG="en_US.UTF-8" \
 RUN apk add --no-cache --update ruby sqlite-libs libstdc++ libxml2 libxslt \
     && apk add --no-cache --virtual .build-deps ruby-dev make g++ sqlite-dev binutils libxml2-dev libxslt-dev patch \
     && gem install sqlite3 -v "~> 2.9" --no-document --platform=ruby -- --use-system-libraries \
-    && gem install mailcatcher-ng -v "~> 1.5.7" --no-document \
+    && gem install mailcatcher-ng -v "~> 1.6.8" --no-document \
     && find /usr/lib/ruby/gems/*/gems -name "*.so" -exec strip {} + \
     && find /usr/lib/ruby/gems/*/extensions -name "*.so" -exec strip {} + \
     && apk del .build-deps \

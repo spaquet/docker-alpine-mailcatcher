@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.7] - 2026-07-01
+
+### Changed
+- Upgraded Alpine Linux from 3.23.4 to 3.23.5
+- Upgraded MailCatcher NG from 1.5.7 to 1.6.8
+
 ## [2.3.6] - 2026-05-22
 
 ### Changed
