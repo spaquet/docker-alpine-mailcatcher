@@ -29,19 +29,19 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4.2.0
+      uses: actions/checkout@v7.0.0
 
     - name: Login to Docker Hub
-      uses: docker/login-action@v3.3.0
+      uses: docker/login-action@v4.2.0
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
 
     - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3.6.0
+      uses: docker/setup-buildx-action@v4.1.0
 
     - name: Set up QEMU
-      uses: docker/setup-qemu-action@v3.1.0
+      uses: docker/setup-qemu-action@v4.2.0
       with:
         platforms: all
 
@@ -57,7 +57,7 @@ jobs:
     #     docker run --rm ${{ env.TEST_TAG }}
 
     - name: Build and push - ${{ matrix.thread.name }}
-      uses: docker/build-push-action@v5.4.0
+      uses: docker/build-push-action@v7.3.0
       with:
         context: .
         file: ./Dockerfile
