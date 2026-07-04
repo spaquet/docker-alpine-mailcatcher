@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.8] - 2026-07-03
+
+### Fixed
+- Fixed Docker image multiplatform manifest creation for proper arm64 support on Apple Silicon
+
 ## [2.3.7] - 2026-07-01
 
 ### Changed
