@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.9] - 2026-07-03
+
+### Changed
+- Upgraded Alpine Linux from 3.23.5 to 3.24.1
+
 ## [2.3.8] - 2026-07-03
 
 ### Fixed
