@@ -6,9 +6,8 @@ on:
     tags:
       - 'v*.*.*'
     paths:
+      - Dockerfile
       - .github/workflows/docker-image.yml
-      - '!**.md'
-      - '!.github/workflows/update-description.yml'
 
 env:
   TEST_TAG: user/myapp:test
@@ -59,4 +58,3 @@ jobs:
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/alpinemailcatcher:latest
         build-args: |
           GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
-
