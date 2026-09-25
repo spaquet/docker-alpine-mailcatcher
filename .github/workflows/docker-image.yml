@@ -2,12 +2,8 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
     tags:
       - 'v*.*.*'
-    paths:
-      - Dockerfile
-      - .github/workflows/docker-image.yml
 
 env:
   TEST_TAG: user/myapp:test
