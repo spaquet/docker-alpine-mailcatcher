@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.11] - 2026-10-24
+
+### Changed
+- Upgraded MailCatcher NG from 1.6.12 to 1.7.0 (fixes CodeQL `js/request-forgery` alert #14 in the web UI)
+- Upgraded Alpine Linux from 3.24.2 to 3.24.3
+- Updated documented Ruby (3.4.9) and SQLite (3.54.1) versions to match the image
+
 ## [2.3.10] - 2026-09-24
 
 ### Changed
