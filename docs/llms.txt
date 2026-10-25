@@ -1,0 +1,32 @@
+# Docker Alpine MailCatcher
+
+> Docker image of MailCatcher NG on the latest Alpine Linux. It runs a local SMTP server and a web UI that catch and display every email sent to them, so applications can be tested without delivering mail to real recipients.
+
+The image is published on Docker Hub as `stpaquet/alpinemailcatcher`. The web interface listens on port 1080 and SMTP on port 1025. Point the application's SMTP settings at `localhost:1025` (or the container host on Docker-Machine setups) and open `http://localhost:1080` to read the captured messages.
+
+Supported architectures: x86_64, arm64 (Apple Silicon), x386/x86_32, and ARM v6, v7 and v8.
+
+Current component versions: Alpine Linux 3.24.3, MailCatcher NG 1.7.0, Ruby 3.4.9, SQLite 3.54.1.
+
+## Documentation
+
+- [Usage guide](https://spaquet.github.io/docker-alpine-mailcatcher/): install, run, run as a daemon, change the message limit, enable message persistence, change ports, and configure environment variables (`MAIL_LIMIT`, `LANG`, `LC_ALL`, `LANGUAGE`, `TIMEZONE`)
+- [Repository README](https://github.com/spaquet/docker-alpine-mailcatcher/blob/master/README.md): project overview, status, and component versions
+- [Changelog](https://github.com/spaquet/docker-alpine-mailcatcher/blob/master/CHANGELOG.md): detailed list of changes for each release
+- [Version history](https://spaquet.github.io/docker-alpine-mailcatcher/#history): release table with the notes for each version
+
+## Integration
+
+- [Ruby on Rails setup](https://spaquet.github.io/docker-alpine-mailcatcher/#ruby-on-rails-rails): configure `action_mailer.smtp_settings` with `address: '127.0.0.1'` and `port: 1025`
+- [Access token setup for Docker Hub](https://spaquet.github.io/docker-alpine-mailcatcher/#access-token): needed when `docker pull` returns an unauthorized error on accounts that use 2FA
+
+## Related projects
+
+- [MailCatcher NG](https://github.com/spaquet/mailcatcher): the MailCatcher fork this image packages
+- [MailCatcher NG website](https://spaquet.github.io/mailcatcher/)
+- [Alpine MailCatcher on Docker Hub](https://hub.docker.com/r/stpaquet/alpinemailcatcher)
+- [Alpine MailCatcher on GitHub](https://github.com/spaquet/docker-alpine-mailcatcher)
+
+## Optional
+
+- [License (MIT)](https://github.com/spaquet/docker-alpine-mailcatcher/blob/master/LICENSE)
