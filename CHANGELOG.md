@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.12] - 2026-11-06
+
+### Security
+- Upgraded Alpine Linux from 3.24.3 to 3.24.4 to fix a vulnerability in Alpine's sshd that allowed unauthorized root login via password guessing. This image does not run sshd, but users running sshd on systems based on Alpine Linux should upgrade.
+
 ## [2.3.11] - 2026-10-24
 
 ### Changed

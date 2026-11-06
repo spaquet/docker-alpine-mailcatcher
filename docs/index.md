@@ -12,7 +12,7 @@ Docker Mailcatcher using the latest Alpine Linux.
 
 | component    | version   |
 | ------------ | --------- |
-| Alpine Linux | 3.24.3    |
+| Alpine Linux | 3.24.4    |
 | MailCatcher NG  | 1.7.0   |
 | Ruby         | 3.4.9     |
 | SQLite       | 3.54.1    |
@@ -199,6 +199,7 @@ MailCatcher is running in `foreground` mode. This does not change MailCatcher be
 | 2.3.9   | 2026-07-03 | Maintenance release:<br><ul><li>Upgrading Alpine Linux to 3.24.1</li><li>Fixed Docker image multiplatform manifest creation for Apple Silicon support</li></ul> |
 | 2.3.10  | 2026-09-24 | Maintenance release:<br><ul><li>Upgrading MailCatcher NG to 1.6.12</li><li>Upgrading Alpine Linux to 3.24.2</li></ul> |
 | 2.3.11  | 2026-10-24 | Maintenance release:<br><ul><li>Upgrading MailCatcher NG to 1.7.0 (validated message URLs in the web UI, CodeQL alert #14)</li><li>Upgrading Alpine Linux to 3.24.3</li></ul> |
+| 2.3.12  | 2026-11-06 | Security release:<br><ul><li>Upgrading Alpine Linux to 3.24.4 (fixes an sshd password authentication vulnerability in earlier Alpine releases)</li></ul> |
 
 
 

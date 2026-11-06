@@ -1,7 +1,7 @@
-FROM alpine:3.24.3
+FROM alpine:3.24.4
 
 LABEL maintainer="spaquet74@gmail.com" \
-    version="2.3.11" \
+    version="2.3.12" \
     description="MailCatcher NG"
 
 ENV LANG="en_US.UTF-8" \

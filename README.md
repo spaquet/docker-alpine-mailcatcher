@@ -12,7 +12,7 @@ Docker Mailcatcher NG using the latest Alpine Linux.
 
 | component    | version   |
 | ------------ | --------- |
-| Alpine Linux | 3.24.3    |
+| Alpine Linux | 3.24.4    |
 | MailCatcher NG | 1.7.0   |
 | Ruby         | 3.4.9     |
 | SQLite       | 3.54.1    |

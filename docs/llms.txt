@@ -6,7 +6,7 @@ The image is published on Docker Hub as `stpaquet/alpinemailcatcher`. The web in
 
 Supported architectures: x86_64, arm64 (Apple Silicon), x386/x86_32, and ARM v6, v7 and v8.
 
-Current component versions: Alpine Linux 3.24.3, MailCatcher NG 1.7.0, Ruby 3.4.9, SQLite 3.54.1.
+Current component versions: Alpine Linux 3.24.4, MailCatcher NG 1.7.0, Ruby 3.4.9, SQLite 3.54.1.
 
 ## Documentation
 
